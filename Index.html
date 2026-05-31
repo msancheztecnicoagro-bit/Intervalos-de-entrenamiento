@@ -244,4 +244,15 @@
             clearInterval(timerInterval);
         });
 
-        resetBtn.addEventListener('click', () =>
+        resetBtn.addEventListener('click', () => {
+            isRunning = false;
+            clearInterval(timerInterval);
+            totalSeconds = 0;
+            isWorkPhase = true;
+            phaseText.textContent = "Preparado";
+            phaseText.className = "phase-text work-mode";
+            display.textContent = "00:00";
+        });
+    </script>
+</body>
+</html>
